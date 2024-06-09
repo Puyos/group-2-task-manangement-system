@@ -8,3 +8,14 @@ function dd( $test )
     die();
 }
 
+function redirect( $path )
+{
+    header("location: /{$GLOBALS["folder"]}/index.php{$path}");
+    exit();
+}
+
+function view( $path, $attribute = [] )
+{   
+    extract($attribute);
+    return require "View/" . $path;
+}
