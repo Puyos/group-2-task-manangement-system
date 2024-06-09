@@ -13,6 +13,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         "role" => $_POST['role']
     ]);
 
+if(!$result) redirect("/create_user");
     
+    redirect("/create_user");
 }
 
+
+view ('add-user.php');
